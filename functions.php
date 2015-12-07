@@ -146,6 +146,13 @@ require_once( LIB_DIR . 'wp_bootstrap_navwalker.php' );
 /* Load theme options */
 require_once( LIB_DIR . 'theme-options.php' );
 
+/* Load post types */
+require_once( LIB_DIR . 'post-types.php' );
+
+/* Load meta boxes */
+require_once( LIB_DIR . 'meta-box.php' );
+
+
 /* Load functions */
 
 //require_once( LIB_DIR . 'functions/category-type.php' );
