@@ -32,6 +32,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*=====[ General CSS ]==========*/
 
+img{
+    height:auto;
+}
+
 .title {
 
 	font-family: 'Raleway', sans-serif;
