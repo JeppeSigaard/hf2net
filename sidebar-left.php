@@ -67,7 +67,7 @@
         </div>
 		<?php endif; ?>
 		<?php
-			if($cat_id[0]->parent == 7 || $cat_id[0]->parent == 24) :
+			if(is_single() && $cat_id[0]->parent == 7 || is_single() && $cat_id[0]->parent == 24) :
 		?>
 			<div id="under_menu">
                 <p><a href="<?php echo get_permalink( 581 ); ?>"><img src="<?php echo ASSETS_DIR; ?>images/Galleri.jpg" width="245" height="175" border="0"></a></p>
