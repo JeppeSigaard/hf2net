@@ -152,6 +152,9 @@ require_once( LIB_DIR . 'post-types.php' );
 /* Load meta boxes */
 require_once( LIB_DIR . 'meta-box.php' );
 
+/* Load filters */
+require_once( LIB_DIR . 'filters.php' );
+
 
 /* Load functions */
 
