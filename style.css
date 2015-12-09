@@ -827,7 +827,8 @@ span.wpcf7-not-valid-tip {
 	}
 
 	.current-menu-parent .dropdown-menu,
-    .current-menu-item .dropdown-menu {
+    .current-menu-item .dropdown-menu,
+    .current-post-ancestor .dropdown-menu{
 
 		display: block;
 

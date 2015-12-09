@@ -1,58 +1,12 @@
 <div id="sidebar-first" class="col-sm-3">
 	<div class="sidebar-wrapper">
-		<?php if ( is_single() ) : ?>
-			<?php
-				$post_info = get_queried_object();
-				$cat_id = get_the_category( $post_info->ID );
-				if ($cat_id[0]->parent != 0 ) :
-				$categories = get_categories( array( 'child_of' => $cat_id[0]->parent ) );
-				if($categories) :
-					?>
-				<ul id="flex-accordion-menu" class="list-unstyled">
-			<?php
-				foreach ( $categories as $cat ) :
-			?>
-			  <li><a href="#"><?php echo $cat->name; ?></a>
-				<ul>
-				  <?php
-				  $post_list = get_posts( array( 'posts_per_page' => -1, 'category' => $cat->term_id ) );
-				  foreach ( $post_list as $post ) : setup_postdata( $post );
-				  ?>
-			      <li><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
-			      <?php endforeach; wp_reset_postdata();?>
-			    </ul>
-			  </li>
-			<?php endforeach; ?>
-				</ul>
-			<?php endif; else : ?>
-			<div class="about-widget widget">
-			  <h3><?php _e( 'Om hf2net.dk', 'ubpress' ); ?></h3>
-			  <div class="about-us">
-			  	<?php if ( ot_get_option('about-us') ) echo ot_get_option('about-us');?>
-			  </div>
-			</div>
-		<?php endif; elseif ( is_category( 13 ) ) :
-				$categories = get_categories( array( 'child_of' => 13 ) );
-				if($categories) :
-					?>
-				<ul id="flex-accordion-menu" class="list-unstyled">
-			<?php
-				foreach ( $categories as $cat ) :
-			?>
-			  <li><a href="#"><?php echo $cat->name; ?></a>
-				<ul>
-				  <?php
-				  $post_list = get_posts( array( 'posts_per_page' => -1, 'category' => $cat->term_id ) );
-				  foreach ( $post_list as $post ) : setup_postdata( $post );
-				  ?>
-			      <li><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>
-			      <?php endforeach; wp_reset_postdata();?>
-			    </ul>
-			  </li>
-			<?php endforeach; ?>
-				</ul>
-			<?php endif; else : ?>
-		<div class="about-widget widget">
+        <?php if ( is_single() && 'post' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','post'); } ?>
+        <?php if ( is_single() && 'ildsjael' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','ildsjael'); } ?>
+        <?php if ( is_single() && 'kursus' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','kursus'); } ?>
+        
+        <?php if (is_home() || is_front_page() ) : ?>
+		
+        <div class="about-widget widget">
 		  <h3><?php _e( 'Om hf2net.dk', 'ubpress' ); ?></h3>
 		  <div class="about-us">
 		  	<?php if ( ot_get_option('about-us') ) echo ot_get_option('about-us');?>
