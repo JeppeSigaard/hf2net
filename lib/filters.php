@@ -9,3 +9,4 @@
  */
 
 require 'filters/ildsjael-content.php';
+require 'filters/menu-latest.php';
