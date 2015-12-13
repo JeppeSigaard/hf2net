@@ -155,6 +155,9 @@ require_once( LIB_DIR . 'meta-box.php' );
 /* Load filters */
 require_once( LIB_DIR . 'filters.php' );
 
+/* Load tax widgets */
+require_once( LIB_DIR . 'widgets.php' );
+
 
 /* Load functions */
 
