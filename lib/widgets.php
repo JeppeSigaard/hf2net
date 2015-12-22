@@ -27,3 +27,4 @@ function unregister_default_widgets() {
 
 
 require 'widgets/about-widget.php';
+

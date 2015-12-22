@@ -14,7 +14,7 @@ function smamo_add_widget_tax() {
 		'update_item'       => __( 'Opdater widgetområde' ),
 		'add_new_item'      => __( 'Tilføj nyt widgetområde' ),
 		'new_item_name'     => __( 'Nyt widgetområde' ),
-		'menu_name'         => __( 'Widgets' ),
+		'menu_name'         => __( 'Widgets venstre' ),
 	);
 
 	$args = array(
@@ -37,7 +37,7 @@ function smamo_add_widget_tax() {
 		'update_item'       => __( 'Opdater widgetområde' ),
 		'add_new_item'      => __( 'Tilføj nyt widgetområde' ),
 		'new_item_name'     => __( 'Nyt widgetområde' ),
-		'menu_name'         => __( 'Widgets' ),
+		'menu_name'         => __( 'Widgets højre' ),
 	);
 
 	$args_right = array(
