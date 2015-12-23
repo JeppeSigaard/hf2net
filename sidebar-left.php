@@ -3,7 +3,8 @@
         <?php if ( is_single() && 'post' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','post'); } ?>
         <?php if ( is_single() && 'ildsjael' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','ildsjael'); } ?>
         <?php if ( is_single() && 'kursus' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','kursus'); } ?>
+        <?php if ( is_single() && 'galleri' == get_post_type(get_the_ID()) )  { get_template_part('template-parts/flexnav/flexnav','galleri'); } ?>
+        <?php get_template_part('template-parts/widgets/widgets','left'); ?>
 	</div>
-	<?php $widgets = wp_get_post_terms(get_the_ID(), 'tax_widget',array('orderby' => 'id'));
-    foreach($widgets as $widget){dynamic_sidebar($widget->slug);}?>
+	
 </div>

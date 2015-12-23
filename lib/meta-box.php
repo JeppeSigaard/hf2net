@@ -8,6 +8,7 @@ function smamo_add_boxes(){
     // Add meta boxes
     require 'meta-box/ildsjael.php';
     require 'meta-box/course.php';
+    require 'meta-box/widget-areas.php';
     
     return $mb;
 

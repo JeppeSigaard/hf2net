@@ -9,7 +9,7 @@ function smamo_widgets_init() {
             'id'          => $widget->slug,
             'name'        => $widget->name,
             'description' => $widget->description,
-            'before_widget' => '<div class="widget">',
+            'before_widget' => '<div class="widget-container">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widget-title">',
             'after_title'   => '</h4>',

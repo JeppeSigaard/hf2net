@@ -4,7 +4,7 @@ add_action( 'init', 'smamo_add_widget_tax', 0 );
 
 function smamo_add_widget_tax() {
 	$labels = array(
-		'name'              => _x( 'Widgetområder venstre', 'taxonomy general name' ),
+		'name'              => _x( 'Widgetområder', 'taxonomy general name' ),
 		'singular_name'     => _x( 'Widgetområde', 'taxonomy singular name' ),
 		'search_items'      => __( 'Søg i Widgetområder' ),
 		'all_items'         => __( 'Alle Widgetområder' ),
@@ -14,19 +14,21 @@ function smamo_add_widget_tax() {
 		'update_item'       => __( 'Opdater widgetområde' ),
 		'add_new_item'      => __( 'Tilføj nyt widgetområde' ),
 		'new_item_name'     => __( 'Nyt widgetområde' ),
-		'menu_name'         => __( 'Widgets venstre' ),
+		'menu_name'         => __( 'Widgetområder' ),
 	);
 
 	$args = array(
 		'hierarchical'      => true,
 		'labels'            => $labels,
-		'show_ui'           => true,
+		'show_ui'           => false,
+        'show_in_menu'      => false,
+        'show_in_nav_menus' => false,
 		'show_admin_column' => false,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'tax_widget' ),
 	);
     
-    $labels_right = array(
+   /* $labels_right = array(
 		'name'              => _x( 'Widgetområder højre', 'taxonomy general name' ),
 		'singular_name'     => _x( 'Widgetområde', 'taxonomy singular name' ),
 		'search_items'      => __( 'Søg i Widgetområder' ),
@@ -44,12 +46,13 @@ function smamo_add_widget_tax() {
 		'hierarchical'      => true,
 		'labels'            => $labels_right,
 		'show_ui'           => true,
+		'show_in_nav_menus' => false,
 		'show_admin_column' => false,
 		'query_var'         => true,
 		'rewrite'           => array( 'slug' => 'tax_widget_right' ),
-	);
+	);*/
 
 	register_taxonomy( 'tax_widget', array( 'page' ), $args );
-    register_taxonomy( 'tax_widget_right', array( 'page' ), $args_right );
+    //register_taxonomy( 'tax_widget_right', array( 'page' ), $args_right );
 
 }
