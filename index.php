@@ -7,7 +7,7 @@
         <?php get_template_part( 'inc/featured-slider' ); ?>
         <h1 class="title"><?php _e( 'Nyt fra hf2net.dk', 'ubpress' );?></h1>
         <?php
-          $args = array( 'posts_per_page' => -1, 'meta_key' => 'on_home', 'meta_value' => 1 );
+          $args = array('meta_key' => 'on_home', 'meta_value' => 1 );
           $post_list = get_posts( $args );
           if ($post_list) :
         ?>
