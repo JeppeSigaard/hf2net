@@ -52,7 +52,7 @@ function smamo_add_widget_tax() {
 		'rewrite'           => array( 'slug' => 'tax_widget_right' ),
 	);*/
 
-	register_taxonomy( 'tax_widget', array( 'page' ), $args );
+	register_taxonomy( 'tax_widget', array( 'page','post','forum','fakta','galleri','ildsjael' ), $args );
     //register_taxonomy( 'tax_widget_right', array( 'page' ), $args_right );
 
 }

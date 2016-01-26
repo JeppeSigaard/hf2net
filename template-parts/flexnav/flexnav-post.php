@@ -9,7 +9,7 @@
   <li><a href="#"><?php echo $cat->name; ?></a>
     <ul>
       <?php
-      $post_list = get_posts( array( 'posts_per_page' => -1, 'category' => $cat->term_id ) );
+      $post_list = get_posts( array( 'orderby' => 'date', 'order' => 'DESC','posts_per_page' => -1, 'category' => $cat->term_id ) );
       foreach ( $post_list as $post ) : setup_postdata( $post );
       ?>
       <li><a href="<?php the_permalink();?>"><?php the_title(); ?></a></li>

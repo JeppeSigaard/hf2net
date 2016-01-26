@@ -3,7 +3,7 @@
 $mb[] = array(
     'id' => 'widgetareas',
     'title' => __( 'Widgetområder', 'rwmb' ),
-    'pages' => array('page'),
+    'pages' => array('page','fakta','forum'),
     'context' => 'side',
     'priority' => 'default',
     'autosave' => true,

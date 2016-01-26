@@ -1032,3 +1032,24 @@ span.wpcf7-not-valid-tip {
 
 }
 
+
+body.type-post li.type-post a{ color: #fff; background-color: #000;}
+body.type-post li.type-post .dropdown-menu{ display: block;}
+
+body.type-page li.type-page a{ color: #fff; background-color: #000;}
+body.type-page li.type-page .dropdown-menu{ display: block;}
+
+body.type-galleri li.type-galleri a{ color: #fff; background-color: #000;}
+body.type-galleri li.type-galleri .dropdown-menu{ display: block;}
+
+body.type-fakta li.type-fakta a{ color: #fff; background-color: #000;}
+body.type-fakta li.type-fakta .dropdown-menu{ display: block;}
+
+body.type-forum li.type-forum a{ color: #fff; background-color: #000;}
+body.type-forum li.type-forum .dropdown-menu{ display: block;}
+
+body.type-ildsjael li.type-ildsjael a{ color: #fff; background-color: #000;}
+body.type-ildsjael li.type-ildsjael .dropdown-menu{ display: block;}
+
+body.type-kursus li.type-kursus a{ color: #fff; background-color: #000;}
+body.type-kursus li.type-kursus .dropdown-menu{ display: block;}

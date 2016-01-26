@@ -9,7 +9,7 @@
   <script src="<?php echo ASSETS_DIR; ?>js/respond.min.js"></script>
 <![endif]-->
 </head>
-  <body <?php body_class();?>>
+  <body <?php body_class('type-'.get_post_type());?>>
     <header id="header" class="clearfix">
       <div class="banner-top">
         <div class="container">

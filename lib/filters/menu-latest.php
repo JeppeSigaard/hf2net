@@ -4,7 +4,7 @@ if ( ! is_admin() ) { add_filter( 'wp_get_nav_menu_items', 'smamo_latest_menu_it
 function smamo_latest_menu_items( $items, $menu, $args ) {
  
     foreach ( $items as $item ) {
- 
+        
         if($item->type === 'custom'){
         
             $query = array('numberposts' => 1); 
@@ -37,7 +37,9 @@ function smamo_latest_menu_items( $items, $menu, $args ) {
         else if($item->type === 'taxonomy'){
             
             $query = array(
-                'post_per_page' => 1,
+                'posts_per_page' => 1,
+                'orderby' => 'date',
+                'order' => 'DESC',
                 'tax_query' => array(
                     array(
                         'taxonomy' => $item->object,
@@ -55,6 +57,26 @@ function smamo_latest_menu_items( $items, $menu, $args ) {
                     $item->url = get_permalink( get_the_ID() ); 
                 wp_reset_postdata();
             }
+        }
+        
+        else if (in_array($item->object, array('ildsjael','gallery','kursus') )) {
+            
+            $query = array(
+                'posts_per_page' => 1,
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'post_type' => $item->object,
+            );
+            
+            $menu_query = new WP_Query($query);
+            
+            while($menu_query->have_posts()) {
+                $menu_query->the_post();
+                    $item->url = get_permalink( get_the_ID() );
+                wp_reset_postdata();
+            }
+            
+            
         }
     }
  
