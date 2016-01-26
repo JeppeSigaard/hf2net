@@ -14,7 +14,7 @@
           <h3>Toårig hf i medierne</h3>
           <ul class="list-unstyled">
             <?php
-              $post_home = get_posts( array( 'posts_per_page' => 2, 'category' => 32 ) );
+              $post_home = get_posts( array( 'posts_per_page' => 2, 'category' => 24 ) );
               foreach ( $post_home as $post ) : setup_postdata( $post );
             ?>
             <li>

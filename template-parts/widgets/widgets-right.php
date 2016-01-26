@@ -8,13 +8,11 @@ else if(is_single() && 'post' === get_post_type(get_the_ID())){
     dynamic_sidebar('nyhedssiders-widgets-hoejre');   
 }
 
-else if(is_page()){
-    $widgets = get_post_meta(get_the_ID(), 'widgets-right',false);
-    if(!empty($widgets)){
-        $areas = get_terms('tax_widget',array('hide_empty' => false,'include' => $widgets));
-        foreach($areas as $area){
-            dynamic_sidebar($area->slug);
-        }
+
+$widgets = get_post_meta(get_the_ID(), 'widgets-right',false);
+if(!empty($widgets)){
+    $areas = get_terms('tax_widget',array('hide_empty' => false,'include' => $widgets));
+    foreach($areas as $area){
+        dynamic_sidebar($area->slug);
     }
-    
 }

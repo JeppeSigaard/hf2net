@@ -1033,8 +1033,8 @@ span.wpcf7-not-valid-tip {
 }
 
 
-body.type-post li.type-post a{ color: #fff; background-color: #000;}
-body.type-post li.type-post .dropdown-menu{ display: block;}
+body.type-post:not(.home) li.type-post a{ color: #fff; background-color: #000;}
+body.type-post:not(.home) li.type-post .dropdown-menu{ display: block;}
 
 body.type-page li.type-page a{ color: #fff; background-color: #000;}
 body.type-page li.type-page .dropdown-menu{ display: block;}
